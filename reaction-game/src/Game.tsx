@@ -86,7 +86,7 @@ const ReactionTimeGame: React.FC = () => {
           <span key={index}>{time}ms, </span>
         ))}
       </div>
-      <div>Average Reaction Time: {averageReactionTime}ms</div>
+      <div>Average Reaction Time: Test{averageReactionTime}ms</div>
     </div>
   );
 };
