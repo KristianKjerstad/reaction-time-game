@@ -41,10 +41,8 @@ const ReactionGame: React.FC = () => {
 
   const setXOrO = () => {
     const willShowX =  Math.random() <= 0.5
-    console.log("rand res", Math.random()   )
     if (willShowX) {
         setShowX(true)
-
     }   
     else {
         setShowX(false)
@@ -60,14 +58,12 @@ const ReactionGame: React.FC = () => {
 
   const handleGameBoxClick = () => {
         if (gameStarted && showX !== null) {
-            console.log("click")
             if (showX === true) {
                 setErrorCount(errorCount + 1)
             }
             else {
                 setReactionTimes([...reactionTimes, Date.now() - timeStarted])
             }
-            
         }
   };
 
@@ -81,13 +77,13 @@ const ReactionGame: React.FC = () => {
         ref={gameBoxRef}
         style={{
           cursor: "pointer", 
+          paddingTop: "40px",
           width: '300px',
           height: '300px',
           border: '1px solid black',
           alignItems: 'center', 
           textAlign: "center",
-          fontSize: "80px"
-          
+          fontSize: "200px"
         }}
         onClick={handleGameBoxClick}
       >
